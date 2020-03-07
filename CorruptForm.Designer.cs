@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CorruptForm));
             this.numPicker = new System.Windows.Forms.NumericUpDown();
             this.labelText = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
@@ -45,17 +46,17 @@
             // 
             // numPicker
             // 
-            this.numPicker.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPicker.Location = new System.Drawing.Point(439, 96);
+            this.numPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numPicker.Location = new System.Drawing.Point(415, 98);
             this.numPicker.Name = "numPicker";
-            this.numPicker.Size = new System.Drawing.Size(120, 47);
+            this.numPicker.Size = new System.Drawing.Size(120, 52);
             this.numPicker.TabIndex = 0;
             this.numPicker.ValueChanged += new System.EventHandler(this.numPicker_ValueChanged);
             // 
             // labelText
             // 
-            this.labelText.Font = new System.Drawing.Font("Roboto", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelText.Location = new System.Drawing.Point(56, 98);
+            this.labelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelText.Location = new System.Drawing.Point(53, 98);
             this.labelText.Name = "labelText";
             this.labelText.Size = new System.Drawing.Size(222, 48);
             this.labelText.TabIndex = 1;
@@ -64,20 +65,23 @@
             // 
             // submitButton
             // 
-            this.submitButton.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(113, 402);
+            this.submitButton.BackColor = System.Drawing.Color.Lime;
+            this.submitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submitButton.Location = new System.Drawing.Point(136, 402);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(130, 70);
             this.submitButton.TabIndex = 2;
             this.submitButton.Text = "Simulate";
-            this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.UseVisualStyleBackColor = false;
             this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // petaBrowsebtn
             // 
-            this.petaBrowsebtn.Location = new System.Drawing.Point(404, 195);
+            this.petaBrowsebtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.petaBrowsebtn.Location = new System.Drawing.Point(415, 188);
             this.petaBrowsebtn.Name = "petaBrowsebtn";
-            this.petaBrowsebtn.Size = new System.Drawing.Size(155, 54);
+            this.petaBrowsebtn.Size = new System.Drawing.Size(120, 35);
             this.petaBrowsebtn.TabIndex = 3;
             this.petaBrowsebtn.Text = "Browse File";
             this.petaBrowsebtn.UseVisualStyleBackColor = true;
@@ -85,9 +89,10 @@
             // 
             // popBtnBrowse
             // 
-            this.popBtnBrowse.Location = new System.Drawing.Point(404, 287);
+            this.popBtnBrowse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.popBtnBrowse.Location = new System.Drawing.Point(415, 299);
             this.popBtnBrowse.Name = "popBtnBrowse";
-            this.popBtnBrowse.Size = new System.Drawing.Size(155, 58);
+            this.popBtnBrowse.Size = new System.Drawing.Size(120, 35);
             this.popBtnBrowse.TabIndex = 4;
             this.popBtnBrowse.Text = "Browse File";
             this.popBtnBrowse.UseVisualStyleBackColor = true;
@@ -95,9 +100,10 @@
             // 
             // Reset
             // 
-            this.Reset.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Reset.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reset.Location = new System.Drawing.Point(361, 402);
+            this.Reset.BackColor = System.Drawing.Color.Crimson;
+            this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Reset.Location = new System.Drawing.Point(379, 402);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(130, 70);
             this.Reset.TabIndex = 5;
@@ -108,57 +114,67 @@
             // labelBrowse1
             // 
             this.labelBrowse1.AutoSize = true;
-            this.labelBrowse1.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrowse1.Location = new System.Drawing.Point(58, 205);
+            this.labelBrowse1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrowse1.Location = new System.Drawing.Point(53, 188);
             this.labelBrowse1.Name = "labelBrowse1";
-            this.labelBrowse1.Size = new System.Drawing.Size(140, 29);
+            this.labelBrowse1.Size = new System.Drawing.Size(175, 32);
             this.labelBrowse1.TabIndex = 6;
             this.labelBrowse1.Text = "Peta Config";
             // 
             // labelBrowse2
             // 
             this.labelBrowse2.AutoSize = true;
-            this.labelBrowse2.Font = new System.Drawing.Font("Roboto", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrowse2.Location = new System.Drawing.Point(58, 299);
+            this.labelBrowse2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrowse2.Location = new System.Drawing.Point(53, 299);
             this.labelBrowse2.Name = "labelBrowse2";
-            this.labelBrowse2.Size = new System.Drawing.Size(207, 29);
+            this.labelBrowse2.Size = new System.Drawing.Size(259, 32);
             this.labelBrowse2.TabIndex = 7;
             this.labelBrowse2.Text = "Population Config";
             // 
             // signPeta
             // 
-            this.signPeta.AutoSize = true;
+            this.signPeta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.signPeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signPeta.Location = new System.Drawing.Point(565, 209);
+            this.signPeta.Location = new System.Drawing.Point(61, 222);
             this.signPeta.Name = "signPeta";
-            this.signPeta.Size = new System.Drawing.Size(19, 25);
+            this.signPeta.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.signPeta.Size = new System.Drawing.Size(474, 32);
             this.signPeta.TabIndex = 8;
             this.signPeta.Text = "-";
+            this.signPeta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // popLabel
             // 
-            this.popLabel.AutoSize = true;
+            this.popLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.popLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.popLabel.Location = new System.Drawing.Point(565, 303);
+            this.popLabel.Location = new System.Drawing.Point(66, 337);
             this.popLabel.Name = "popLabel";
-            this.popLabel.Size = new System.Drawing.Size(19, 25);
+            this.popLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.popLabel.Size = new System.Drawing.Size(469, 28);
             this.popLabel.TabIndex = 9;
             this.popLabel.Text = "-";
+            this.popLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.popLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Roboto", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(90, 9);
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1004, 69);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Tugas Besar II Stima : Corona Virus Simulator";
+            this.label1.Text = " Corona Virus Simulation";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // mainPanel
             // 
-            this.mainPanel.Location = new System.Drawing.Point(606, 96);
+            this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mainPanel.Location = new System.Drawing.Point(595, 96);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(488, 389);
             this.mainPanel.TabIndex = 11;
@@ -179,7 +195,13 @@
             this.Controls.Add(this.labelText);
             this.Controls.Add(this.labelBrowse2);
             this.Controls.Add(this.labelBrowse1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CorruptForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Text = "Corruption";
+            this.Load += new System.EventHandler(this.CorruptForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numPicker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

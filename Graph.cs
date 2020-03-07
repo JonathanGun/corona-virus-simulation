@@ -22,6 +22,7 @@ namespace Corruption
         public void BFS(int time)
         {
             this.cities[this.startCity].timeInfected = 0;
+            this.cities[this.startCity].isInfected = true;
 
             Queue<Edge> VirusInfector = new Queue<Edge>();
 

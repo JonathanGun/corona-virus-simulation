@@ -71,7 +71,8 @@ namespace Corruption
             if (result == DialogResult.OK)
             {
                 this.filePetaPath = fileDialog.FileName;
-                signPeta.Text = "OK";
+                string[] text = this.filePetaPath.Split('\\');
+                signPeta.Text = text[text.Length - 1];
                 Console.WriteLine("File Peta: " + this.filePetaPath);
             }
         }
@@ -88,7 +89,8 @@ namespace Corruption
             if (result == DialogResult.OK)
             {
                 this.filePopulationPath = fileDialog.FileName;
-                popLabel.Text = "OK";
+                string[] text = this.filePopulationPath.Split('\\');
+                popLabel.Text = text[text.Length - 1];
                 Console.WriteLine("File Populasi : " + this.filePopulationPath);
             }
         }
@@ -104,6 +106,11 @@ namespace Corruption
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void CorruptForm_Load(object sender, EventArgs e)
         {
 
         }
