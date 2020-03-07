@@ -16,7 +16,14 @@ namespace Corruption
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CorruptForm());
+            try
+            {
+                Application.Run(new CorruptForm());
+            } catch 
+            {
+                Application.Run(new ErrorForm());
+            }
+            
         }
     }
 }

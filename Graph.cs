@@ -204,7 +204,7 @@ namespace Corruption
 
         private void loadPetaFromFile(string filename)
         {
-            using (StreamReader sr = File.OpenText("../../" + filename))
+            using (StreamReader sr = File.OpenText(filename))
             {
                 string str = sr.ReadLine();
                 while ((str = sr.ReadLine()) != null)
@@ -217,7 +217,7 @@ namespace Corruption
 
         private void loadPopulationFromFile(string filename)
         {
-            using (StreamReader sr = File.OpenText("../../" + filename))
+            using (StreamReader sr = File.OpenText(filename))
             {
                 string line = sr.ReadLine();
                 string[] tmp = line.Split();
