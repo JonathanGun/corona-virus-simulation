@@ -107,7 +107,7 @@ namespace Corruption
             }
         }
 
-        public void Visualize()
+        public GViewer Visualize()
         {
             //create a form 
             Form form = new Form();
@@ -147,24 +147,18 @@ namespace Corruption
             {
                 graph.AddEdge(e.fromCity.name, e.toCity.name).Attr.Color = Msagl.Color.Red;
             }
-            //graph.AddEdge("A", "C").Attr.Color = Msagl.Color.Green;
-            //graph.FindNode("A").Attr.FillColor = Msagl.Color.Magenta;
-            //graph.FindNode("B").Attr.FillColor = Msagl.Color.MistyRose;
-            //Msagl.Node c = graph.FindNode("C");
-            //c.Attr.FillColor = Msagl.Color.PaleGreen;
-            //c.Attr.Shape = Msagl.Shape.Diamond;
-
             //bind the graph to the viewer 
             viewer.Graph = graph;
 
             //associate the viewer with the form 
             form.SuspendLayout();
             viewer.Dock = DockStyle.Fill;
-            form.Controls.Add(viewer);
-            form.ResumeLayout();
+            return viewer;
+            //form.Controls.Add(viewer);
+            //form.ResumeLayout();
 
             //show the form 
-            form.ShowDialog();
+            //form.ShowDialog();
         }
 
         public void PrintInfectionPath()

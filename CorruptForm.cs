@@ -34,7 +34,8 @@ namespace Corruption
             g.BFS(time);
             g.PrintInfectionPath();
             g.PrintInfo();
-            g.Visualize();
+            mainPanel.Controls.Clear();
+            mainPanel.Controls.Add(g.Visualize());
             g.animate(time);
         }
 
@@ -58,7 +59,9 @@ namespace Corruption
             filePopulationPath = "";
 
             numPicker.Value = 0;
-            
+
+            mainPanel.Controls.Clear();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -91,6 +94,16 @@ namespace Corruption
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

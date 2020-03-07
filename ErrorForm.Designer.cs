@@ -31,6 +31,7 @@
             this.ErrorText = new System.Windows.Forms.Label();
             this.viewError = new System.Windows.Forms.Label();
             this.closeBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ErrorText
@@ -62,11 +63,21 @@
             this.closeBtn.UseVisualStyleBackColor = true;
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(64, 108);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 71);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "File Not Found";
+            // 
             // ErrorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(273, 317);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.viewError);
             this.Controls.Add(this.ErrorText);
@@ -83,5 +94,6 @@
         private System.Windows.Forms.Label ErrorText;
         private System.Windows.Forms.Label viewError;
         private System.Windows.Forms.Button closeBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
