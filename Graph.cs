@@ -61,37 +61,7 @@ namespace Corruption
             }
         }
 
-        private void spread(int t)
-        {
-            this.cities[this.startCity].timeInfected = 0;
-            this.cities[this.startCity].isInfected = true;
-            Queue<City> infected = new Queue<City>();
-
-            foreach (City c in this.cities.Values)
-            {
-                if (c.isInfected)
-                {
-                    infected.Enqueue(c);
-                }
-                c.isInfected = false;
-            }
-
-            while (infected.Count > 0)
-            {
-                City inf = infected.Dequeue();
-                inf.isInfected = true;
-                foreach (City c in inf.neighbors.Keys)
-                {
-                    if (inf.CanInfect(c, t) && !c.isInfected)
-                    {
-                        c.isInfected = true;
-                        c.timeInfected = Math.Min(t, c.timeInfected);
-                        infected.Enqueue(this.cities[c.name]);
-                    }
-                }
-            }
-        }
-
+       
         public GViewer Visualize(int t)
         {
             //create a form 
@@ -158,11 +128,9 @@ namespace Corruption
             string envNewLine = Environment.NewLine;
             res += "Virus Path:" + envNewLine;
             //Console.WriteLine("Virus Path:");
-            int count = 0;
             foreach (Edge cityEdge in this.infectedEdge)
             {
-                count++;
-                res += count + ". ";
+                res += "- ";
                 res += cityEdge.printInfoEdge();
                 res += envNewLine;
             }
