@@ -41,13 +41,17 @@
             this.popLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numPicker)).BeginInit();
             this.SuspendLayout();
             // 
             // numPicker
             // 
             this.numPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numPicker.Location = new System.Drawing.Point(415, 98);
+            this.numPicker.Location = new System.Drawing.Point(366, 99);
             this.numPicker.Name = "numPicker";
             this.numPicker.Size = new System.Drawing.Size(120, 52);
             this.numPicker.TabIndex = 0;
@@ -55,8 +59,9 @@
             // 
             // labelText
             // 
-            this.labelText.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelText.Location = new System.Drawing.Point(53, 98);
+            this.labelText.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelText.ForeColor = System.Drawing.Color.White;
+            this.labelText.Location = new System.Drawing.Point(44, 102);
             this.labelText.Name = "labelText";
             this.labelText.Size = new System.Drawing.Size(222, 48);
             this.labelText.TabIndex = 1;
@@ -68,7 +73,7 @@
             this.submitButton.BackColor = System.Drawing.Color.Lime;
             this.submitButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submitButton.Location = new System.Drawing.Point(136, 402);
+            this.submitButton.Location = new System.Drawing.Point(82, 408);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(130, 70);
             this.submitButton.TabIndex = 2;
@@ -79,7 +84,7 @@
             // petaBrowsebtn
             // 
             this.petaBrowsebtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.petaBrowsebtn.Location = new System.Drawing.Point(415, 188);
+            this.petaBrowsebtn.Location = new System.Drawing.Point(366, 189);
             this.petaBrowsebtn.Name = "petaBrowsebtn";
             this.petaBrowsebtn.Size = new System.Drawing.Size(120, 35);
             this.petaBrowsebtn.TabIndex = 3;
@@ -90,7 +95,7 @@
             // popBtnBrowse
             // 
             this.popBtnBrowse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.popBtnBrowse.Location = new System.Drawing.Point(415, 299);
+            this.popBtnBrowse.Location = new System.Drawing.Point(366, 300);
             this.popBtnBrowse.Name = "popBtnBrowse";
             this.popBtnBrowse.Size = new System.Drawing.Size(120, 35);
             this.popBtnBrowse.TabIndex = 4;
@@ -103,7 +108,7 @@
             this.Reset.BackColor = System.Drawing.Color.Crimson;
             this.Reset.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Reset.Location = new System.Drawing.Point(379, 402);
+            this.Reset.Location = new System.Drawing.Point(302, 408);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(130, 70);
             this.Reset.TabIndex = 5;
@@ -114,43 +119,50 @@
             // labelBrowse1
             // 
             this.labelBrowse1.AutoSize = true;
-            this.labelBrowse1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrowse1.Location = new System.Drawing.Point(53, 188);
+            this.labelBrowse1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrowse1.ForeColor = System.Drawing.Color.White;
+            this.labelBrowse1.Location = new System.Drawing.Point(44, 192);
             this.labelBrowse1.Name = "labelBrowse1";
-            this.labelBrowse1.Size = new System.Drawing.Size(175, 32);
+            this.labelBrowse1.Size = new System.Drawing.Size(156, 32);
             this.labelBrowse1.TabIndex = 6;
             this.labelBrowse1.Text = "Peta Config";
+            this.labelBrowse1.Click += new System.EventHandler(this.labelBrowse1_Click);
             // 
             // labelBrowse2
             // 
             this.labelBrowse2.AutoSize = true;
-            this.labelBrowse2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBrowse2.Location = new System.Drawing.Point(53, 299);
+            this.labelBrowse2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBrowse2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelBrowse2.Location = new System.Drawing.Point(44, 303);
             this.labelBrowse2.Name = "labelBrowse2";
-            this.labelBrowse2.Size = new System.Drawing.Size(259, 32);
+            this.labelBrowse2.Size = new System.Drawing.Size(236, 32);
             this.labelBrowse2.TabIndex = 7;
             this.labelBrowse2.Text = "Population Config";
+            this.labelBrowse2.Click += new System.EventHandler(this.labelBrowse2_Click);
             // 
             // signPeta
             // 
             this.signPeta.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.signPeta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signPeta.Location = new System.Drawing.Point(61, 222);
+            this.signPeta.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.signPeta.ForeColor = System.Drawing.Color.White;
+            this.signPeta.Location = new System.Drawing.Point(47, 224);
             this.signPeta.Name = "signPeta";
             this.signPeta.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.signPeta.Size = new System.Drawing.Size(474, 32);
+            this.signPeta.Size = new System.Drawing.Size(439, 32);
             this.signPeta.TabIndex = 8;
             this.signPeta.Text = "-";
             this.signPeta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.signPeta.Click += new System.EventHandler(this.signPeta_Click);
             // 
             // popLabel
             // 
             this.popLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.popLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.popLabel.Location = new System.Drawing.Point(66, 337);
+            this.popLabel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popLabel.ForeColor = System.Drawing.Color.White;
+            this.popLabel.Location = new System.Drawing.Point(42, 335);
             this.popLabel.Name = "popLabel";
             this.popLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.popLabel.Size = new System.Drawing.Size(469, 28);
+            this.popLabel.Size = new System.Drawing.Size(444, 28);
             this.popLabel.TabIndex = 9;
             this.popLabel.Text = "-";
             this.popLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -159,10 +171,11 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 11);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(104, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1004, 69);
             this.label1.TabIndex = 10;
@@ -174,15 +187,63 @@
             // 
             this.mainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mainPanel.BackgroundImage")));
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.mainPanel.Location = new System.Drawing.Point(595, 96);
+            this.mainPanel.Location = new System.Drawing.Point(497, 93);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(488, 389);
             this.mainPanel.TabIndex = 11;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(989, 99);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 13;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(464, 603);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(306, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "© 2020 Corruption All Right Reserved";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(-2, 573);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(1209, 28);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "_________________________________________________________________________________" +
+    "_______________________________________________\r\n\r\n";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(416, 486);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(403, 104);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "                       Created By :\r\n      Jovan Karuna Cahyadi / 13518024\r\n    J" +
+    "onathan Yudi Gunawan / 13518084\r\n                 William / 13518138";
+            // 
             // CorruptForm
             // 
-            this.ClientSize = new System.Drawing.Size(1106, 509);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(1196, 625);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.popLabel);
             this.Controls.Add(this.petaBrowsebtn);
             this.Controls.Add(this.signPeta);
@@ -221,6 +282,10 @@
         private System.Windows.Forms.Label popLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
