@@ -40,8 +40,8 @@ namespace Corruption
                     g.PrintInfo();
                     mainPanel.Controls.Clear();
                     mainPanel.Controls.Add(g.Visualize(i));
-                    pathBox.Text = "";
-                    pathBox.Text = g.PrintInfectionPath();
+                    pathBox.Text = "==[ Day " + i.ToString()+" ]==" + Environment.NewLine;
+                    pathBox.Text += g.PrintInfectionPath();
                     await Task.Delay(50);
                 }
             } catch (Exception error)
