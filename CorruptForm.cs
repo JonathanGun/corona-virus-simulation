@@ -39,8 +39,20 @@ namespace Corruption
                 mainPanel.Controls.Clear();
                 mainPanel.Controls.Add(g.Visualize());
                 g.animate(time);
+                pathBox.Text = "";
+                pathBox.Text = g.PrintInfectionPath();
             } catch (Exception error)
             {
+                pathBox.Text = "";
+                signPeta.Text = "-";
+                popLabel.Text = "-";
+
+                filePetaPath = "";
+                filePopulationPath = "";
+
+                numPicker.Value = 0;
+
+                mainPanel.Controls.Clear();
                 string message = error.Message;
                 string title = "Error happened";
                 MessageBox.Show(message, title);
@@ -62,7 +74,7 @@ namespace Corruption
         {
             signPeta.Text = "-";
             popLabel.Text = "-";
-
+            pathBox.Text = "";
             filePetaPath = "";
             filePopulationPath = "";
 

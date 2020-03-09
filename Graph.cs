@@ -162,17 +162,21 @@ namespace Corruption
             //form.ShowDialog();
         }
 
-        public void PrintInfectionPath()
+        public string PrintInfectionPath()
         {
-            Console.WriteLine("Virus Path:");
+            string res = "";
+            string envNewLine = Environment.NewLine;
+            res += "Virus Path:" + envNewLine;
+            //Console.WriteLine("Virus Path:");
             int count = 0;
             foreach (Edge cityEdge in this.infectedEdge)
             {
                 count++;
-                Console.Write(count + ". ");
-                cityEdge.printInfoEdge();
+                res += count + ". ";
+                res += cityEdge.printInfoEdge();
+                res += envNewLine;
             }
-            Console.WriteLine();
+            return res;
         }
 
         public void PrintInfo()

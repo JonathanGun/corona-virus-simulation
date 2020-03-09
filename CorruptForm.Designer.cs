@@ -41,10 +41,10 @@
             this.popLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pathBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numPicker)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.numPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numPicker.Location = new System.Drawing.Point(366, 99);
             this.numPicker.Name = "numPicker";
-            this.numPicker.Size = new System.Drawing.Size(120, 52);
+            this.numPicker.Size = new System.Drawing.Size(120, 45);
             this.numPicker.TabIndex = 0;
             this.numPicker.ValueChanged += new System.EventHandler(this.numPicker_ValueChanged);
             // 
@@ -123,7 +123,7 @@
             this.labelBrowse1.ForeColor = System.Drawing.Color.White;
             this.labelBrowse1.Location = new System.Drawing.Point(44, 192);
             this.labelBrowse1.Name = "labelBrowse1";
-            this.labelBrowse1.Size = new System.Drawing.Size(156, 32);
+            this.labelBrowse1.Size = new System.Drawing.Size(132, 26);
             this.labelBrowse1.TabIndex = 6;
             this.labelBrowse1.Text = "Peta Config";
             this.labelBrowse1.Click += new System.EventHandler(this.labelBrowse1_Click);
@@ -135,7 +135,7 @@
             this.labelBrowse2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.labelBrowse2.Location = new System.Drawing.Point(44, 303);
             this.labelBrowse2.Name = "labelBrowse2";
-            this.labelBrowse2.Size = new System.Drawing.Size(236, 32);
+            this.labelBrowse2.Size = new System.Drawing.Size(198, 26);
             this.labelBrowse2.TabIndex = 7;
             this.labelBrowse2.Text = "Population Config";
             this.labelBrowse2.Click += new System.EventHandler(this.labelBrowse2_Click);
@@ -193,14 +193,6 @@
             this.mainPanel.TabIndex = 11;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(989, 99);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 13;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -208,7 +200,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(464, 603);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(306, 20);
+            this.label2.Size = new System.Drawing.Size(261, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "© 2020 Corruption All Right Reserved";
             // 
@@ -231,19 +223,29 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(416, 486);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(403, 104);
+            this.label4.Size = new System.Drawing.Size(328, 92);
             this.label4.TabIndex = 15;
             this.label4.Text = "                       Created By :\r\n      Jovan Karuna Cahyadi / 13518024\r\n    J" +
     "onathan Yudi Gunawan / 13518084\r\n                 William / 13518138";
+            // 
+            // pathBox
+            // 
+            this.pathBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pathBox.Location = new System.Drawing.Point(1004, 93);
+            this.pathBox.Multiline = true;
+            this.pathBox.Name = "pathBox";
+            this.pathBox.ReadOnly = true;
+            this.pathBox.Size = new System.Drawing.Size(171, 389);
+            this.pathBox.TabIndex = 16;
             // 
             // CorruptForm
             // 
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1196, 625);
+            this.Controls.Add(this.pathBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.popLabel);
             this.Controls.Add(this.petaBrowsebtn);
             this.Controls.Add(this.signPeta);
@@ -282,10 +284,10 @@
         private System.Windows.Forms.Label popLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox pathBox;
     }
 }
 

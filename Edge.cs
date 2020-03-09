@@ -13,9 +13,9 @@ namespace Corruption
             this.toCity = b;
         }
 
-        public void printInfoEdge()
+        public string printInfoEdge()
         {
-            Console.WriteLine(this.fromCity.name + " ==> " + this.toCity.name);
+            return this.fromCity.name + " ==> " + this.toCity.name;
         }
     }
 }
