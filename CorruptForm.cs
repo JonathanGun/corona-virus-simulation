@@ -29,14 +29,22 @@ namespace Corruption
         private void submitButton_Click(object sender, EventArgs e)
         {
             Graph g = new Graph();
-            g.loadFromFile(population: this.filePopulationPath, peta: this.filePetaPath);
-            int time = (int) numPicker.Value;
-            g.BFS(time);
-            g.PrintInfectionPath();
-            g.PrintInfo();
-            mainPanel.Controls.Clear();
-            mainPanel.Controls.Add(g.Visualize());
-            g.animate(time);
+            try
+            {
+                g.loadFromFile(population: this.filePopulationPath, peta: this.filePetaPath);
+                int time = (int)numPicker.Value;
+                g.BFS(time);
+                g.PrintInfectionPath();
+                g.PrintInfo();
+                mainPanel.Controls.Clear();
+                mainPanel.Controls.Add(g.Visualize());
+                g.animate(time);
+            } catch (Exception error)
+            {
+                string message = error.Message;
+                string title = "Error happened";
+                MessageBox.Show(message, title);
+            }            
         }
 
         private void labelText_Click(object sender, EventArgs e)

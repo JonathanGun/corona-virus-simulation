@@ -12,9 +12,10 @@ namespace Corruption
 {
     public partial class ErrorForm : Form
     {
-        public ErrorForm()
+        public ErrorForm(Exception e)
         {
             InitializeComponent();
+            label1.Text = e.Message;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,6 +29,11 @@ namespace Corruption
         }
 
         private void ErrorForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
         {
 
         }
