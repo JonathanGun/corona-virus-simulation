@@ -60,22 +60,6 @@ namespace Corruption
                 }
             }
         }
-        public void animate(int T)
-        {
-            int t = 0;
-            while (t < T)
-            {
-                this.spread(t);
-                t++;
-                // g.Visualize();
-                if (t % 10 == 0)
-                {
-                    Console.WriteLine("Day " + t);
-                    this.PrintInfo(t);
-                    Console.WriteLine();
-                }
-            }
-        }
 
         private void spread(int t)
         {
@@ -108,7 +92,7 @@ namespace Corruption
             }
         }
 
-        public GViewer Visualize()
+        public GViewer Visualize(int t)
         {
             //create a form 
             Form form = new Form();
@@ -125,7 +109,13 @@ namespace Corruption
                 graph.AddNode(city.name);
                 if (city.isInfected)
                 {
-                    graph.FindNode(city.name).Attr.FillColor = Msagl.Color.OrangeRed;
+                    int red = 255, other = 255;
+                    if (city.isInfected)
+                    {
+                        red = 250;
+                        other = 150 - (int)(city.InfectedPercentage(t) * 150);
+                    }
+                    graph.FindNode(city.name).Attr.FillColor = new Msagl.Color(255, (byte)red, (byte)other, (byte)other);
                 }
 
                 foreach (City neigh in city.neighbors.Keys)

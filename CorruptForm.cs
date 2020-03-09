@@ -26,21 +26,24 @@ namespace Corruption
               // do nothing
         }
 
-        private void submitButton_Click(object sender, EventArgs e)
+        private async void submitButton_Click(object sender, EventArgs e)
         {
-            Graph g = new Graph();
             try
             {
-                g.loadFromFile(population: this.filePopulationPath, peta: this.filePetaPath);
                 int time = (int)numPicker.Value;
-                g.BFS(time);
-                g.PrintInfectionPath();
-                g.PrintInfo();
-                mainPanel.Controls.Clear();
-                mainPanel.Controls.Add(g.Visualize());
-                g.animate(time);
-                pathBox.Text = "";
-                pathBox.Text = g.PrintInfectionPath();
+                for(int i = 0; i <= time; ++i)
+                {
+                    Graph g = new Graph();
+                    g.loadFromFile(population: this.filePopulationPath, peta: this.filePetaPath);
+                    g.BFS(i);
+                    g.PrintInfectionPath();
+                    g.PrintInfo();
+                    mainPanel.Controls.Clear();
+                    mainPanel.Controls.Add(g.Visualize(i));
+                    pathBox.Text = "";
+                    pathBox.Text = g.PrintInfectionPath();
+                    await Task.Delay(50);
+                }
             } catch (Exception error)
             {
                 pathBox.Text = "";

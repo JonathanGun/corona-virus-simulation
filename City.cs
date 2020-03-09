@@ -103,5 +103,10 @@ namespace Corruption
             Console.WriteLine("Infected Population: " + infPop + " (" + (double)infPop / this.population * 100 + "%)");
             Console.WriteLine();
         }
+
+        public double InfectedPercentage(int t)
+        {
+            return this.InfectedPopulation(t) / this.population;
+        }
     }
 }
