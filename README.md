@@ -8,9 +8,9 @@ Corona-virus-simulator is a corona virus spreading pandemic simulator that utili
 1. Install [Microsoft MSAGL Drawing](https://www.nuget.org/packages/Microsoft.Msagl.Drawing/) package drom Package Manager
 
 ## Usage
-Currently only supports Windows Platform
+Currently only supports Windows .NET Platform
 
-1. Run `corruption.exe`
+1. Run `Corruption.exe`
 2. Select Population Config file,
 
 you can create your own population config with the format
@@ -84,3 +84,9 @@ save as txt file
 
 ## Acknowledgement
 This project is made to fulfill IF2211 Algorithm Strategy course.
+
+## Contributors
+This project is created by :
+- Jovan Karuna Cahyadi
+- Jonathan Yudi Gunawan
+- William
